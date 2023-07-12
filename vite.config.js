@@ -7,8 +7,15 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: "./src/components/main.js",
+      entry: "./src/index.js",
       name: "Test1Component",
+      fileName: "termene-test-component",
+    },
+    rollupOptions: {
+      external: ["vue"],
+      output: {
+        globals: { vue: "Vue" },
+      },
     },
     // rollupOptions: {
     //   input: {
