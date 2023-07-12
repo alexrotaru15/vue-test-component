@@ -1,0 +1,28 @@
+{
+  "name": "termene-test-component",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files":["dist"],
+  "main":"./dist/termene-test-component.umd.cjs",
+  "module":"./dist/termene-test-component.js",
+  "exports":{
+    ".":{
+      "import":"./dist/termene-test-component.js",
+      "require":"./dist/termene-test-component.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.0"
+  }
+}
