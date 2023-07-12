@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: "./src/main.js",
+      entry: "./src/components/main.js",
       name: "Test1Component",
     },
     // rollupOptions: {
