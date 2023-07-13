@@ -4,6 +4,12 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <HelloWorld msg="Componenta noua" />
+  <p>
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+  <router-view></router-view>
+  <p>end component noua</p>
 </template>
 
 <style scoped>
