@@ -1,44 +1,44 @@
-import { ref as i, openBlock as c, createElementBlock as _, Fragment as p, createElementVNode as s, toDisplayString as h, pushScopeId as u, popScopeId as l, resolveComponent as d, createVNode as a, withCtx as f, createTextVNode as v } from "vue";
-import { useRouter as b, useRoute as x, createRouter as g, createWebHashHistory as y } from "vue-router";
+import { ref as i, openBlock as c, createElementBlock as _, Fragment as p, createElementVNode as a, toDisplayString as h, pushScopeId as u, popScopeId as l, resolveComponent as d, createVNode as s, withCtx as v, createTextVNode as f } from "vue";
+import { useRouter as x, useRoute as b, createRouter as g, createWebHashHistory as y } from "vue-router";
 const r = (e, t) => {
   const o = e.__vccOpts || e;
   for (const [n, m] of t)
     o[n] = m;
   return o;
-}, H = (e) => (u("data-v-18ccd6b8"), e = e(), l(), e), w = /* @__PURE__ */ H(() => /* @__PURE__ */ s("div", { class: "card" }, "aceasta este noua componenta", -1)), A = {
+}, k = (e) => (u("data-v-18ccd6b8"), e = e(), l(), e), H = /* @__PURE__ */ k(() => /* @__PURE__ */ a("div", { class: "card" }, "aceasta este noua componenta", -1)), w = {
   __name: "HelloWorld",
   props: {
     msg: String
   },
   setup(e) {
     return i(0), (t, o) => (c(), _(p, null, [
-      s("h1", null, h(e.msg), 1),
-      w
+      a("h1", null, h(e.msg), 1),
+      H
     ], 64));
   }
-}, I = /* @__PURE__ */ r(A, [["__scopeId", "data-v-18ccd6b8"]]);
-const S = (e) => (u("data-v-f15dae4a"), e = e(), l(), e), $ = { class: "awala" }, k = /* @__PURE__ */ S(() => /* @__PURE__ */ s("p", null, "end component noua", -1)), C = {
+}, A = /* @__PURE__ */ r(w, [["__scopeId", "data-v-18ccd6b8"]]);
+const I = (e) => (u("data-v-f15dae4a"), e = e(), l(), e), S = { class: "awala" }, $ = /* @__PURE__ */ I(() => /* @__PURE__ */ a("p", null, "end component noua", -1)), C = {
   __name: "App",
   setup(e) {
     return (t, o) => {
       const n = d("router-view");
-      return c(), _("div", $, [
-        a(I, { msg: "Componenta noua" }),
-        a(n),
-        k
+      return c(), _("div", S, [
+        s(A, { msg: "Componenta noua" }),
+        s(n),
+        $
       ]);
     };
   }
-}, F = /* @__PURE__ */ r(C, [["__scopeId", "data-v-f15dae4a"]]), W = /* @__PURE__ */ s("h2", null, "Home", -1), N = {
+}, F = /* @__PURE__ */ r(C, [["__scopeId", "data-v-f15dae4a"]]), W = /* @__PURE__ */ a("h2", null, "Home", -1), N = {
   __name: "Home",
   setup(e) {
-    return b(), x(), (t, o) => {
+    return x(), b(), (t, o) => {
       const n = d("router-link");
       return c(), _(p, null, [
         W,
-        a(n, { to: "about" }, {
-          default: f(() => [
-            v("about")
+        s(n, { to: "about" }, {
+          default: v(() => [
+            f("about")
           ]),
           _: 1
         })
@@ -50,8 +50,12 @@ function V(e, t) {
   return c(), _("h2", null, "About");
 }
 const B = /* @__PURE__ */ r(R, [["render", V]]), E = [
-  { path: "/", component: N },
-  { path: "/about", name: "about", component: B }
+  { path: "/marketplace/companies", component: N },
+  {
+    path: "/marketplace/companies/individual",
+    name: "about",
+    component: B
+  }
 ], O = g({
   history: y(),
   routes: E

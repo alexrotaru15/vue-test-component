@@ -3,8 +3,12 @@ import Home from "./components/Home.vue";
 import About from "./components/About.vue";
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/about", name: "about", component: About },
+  { path: "/marketplace/companies", component: Home },
+  {
+    path: "/marketplace/companies/individual",
+    name: "about",
+    component: About,
+  },
 ];
 
 const router = createRouter({
