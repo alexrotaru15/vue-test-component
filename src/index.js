@@ -1,5 +1,3 @@
-import { About } from "./components";
-import { Contact } from "./components";
-import { Home } from "./components";
+import App from "./App.vue";
 
-export { About, Contact, Home };
+export { App };

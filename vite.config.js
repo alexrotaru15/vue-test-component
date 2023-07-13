@@ -1,4 +1,4 @@
-import * as path from "path";
+import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: "./src/index.js",
-      name: "Test1Component",
+      entry: resolve(__dirname, "src/index.js"),
+      name: "TestTermeneComponent",
       fileName: "termene-test-component",
     },
     rollupOptions: {
@@ -17,11 +17,5 @@ export default defineConfig({
         globals: { vue: "Vue" },
       },
     },
-    // rollupOptions: {
-    //   input: {
-    //     main: path.resolve(__dirname, "src/components/main.js"),
-    //   },
-    //   external: ["vue"],
-    // },
   },
 });

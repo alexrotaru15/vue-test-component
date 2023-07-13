@@ -1,7 +1,7 @@
 {
   "name": "termene-test-component",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "files":["dist"],
   "main":"./dist/termene-test-component.umd.cjs",
@@ -11,7 +11,7 @@
       "import":"./dist/termene-test-component.js",
       "require":"./dist/termene-test-component.umd.cjs"
     },
-    "./style.css":"./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
