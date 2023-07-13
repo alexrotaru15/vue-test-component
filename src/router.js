@@ -5,7 +5,7 @@ import About from "./components/About.vue";
 const routes = [
   { path: "/marketplace/companies", component: Home },
   {
-    path: "/marketplace/companies/individual",
+    path: "/marketplace/companies/:company",
     name: "about",
     component: About,
   },

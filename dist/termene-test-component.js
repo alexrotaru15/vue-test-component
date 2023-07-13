@@ -1,46 +1,55 @@
-import { resolveComponent as _, openBlock as c, createBlock as p, createElementBlock as a, Fragment as u, createVNode as l, withCtx as m, createTextVNode as i, createElementVNode as d } from "vue";
+import { resolveComponent as c, openBlock as r, createBlock as d, createElementBlock as a, Fragment as s, createVNode as p, withCtx as u, createTextVNode as m, createElementVNode as l } from "vue";
 import { createRouter as f, createWebHashHistory as h } from "vue-router";
-const r = (e, o) => {
-  const t = e.__vccOpts || e;
-  for (const [n, s] of o)
-    t[n] = s;
-  return t;
+const _ = (t, o) => {
+  const e = t.__vccOpts || t;
+  for (const [n, i] of o)
+    e[n] = i;
+  return e;
 };
 const v = {
   __name: "App",
-  setup(e) {
-    return (o, t) => {
-      const n = _("router-view");
-      return c(), p(n);
+  setup(t) {
+    return (o, e) => {
+      const n = c("router-view");
+      return r(), d(n);
     };
   }
-}, N = /* @__PURE__ */ r(v, [["__scopeId", "data-v-3ad8f193"]]), x = {}, k = /* @__PURE__ */ d("h2", null, "Home", -1);
-function b(e, o) {
-  const t = _("router-link");
-  return c(), a(u, null, [
-    k,
-    l(t, { to: { name: "about" } }, {
-      default: m(() => [
-        i("about")
+}, N = /* @__PURE__ */ _(v, [["__scopeId", "data-v-3ad8f193"]]), k = {}, x = /* @__PURE__ */ l("h2", null, "Home", -1);
+function y(t, o) {
+  const e = c("router-link");
+  return r(), a(s, null, [
+    x,
+    p(e, { to: { name: "about", params: { company: "awala" } } }, {
+      default: u(() => [
+        m("about")
       ]),
       _: 1
     })
   ], 64);
 }
-const y = /* @__PURE__ */ r(x, [["render", b]]), A = {};
-function H(e, o) {
-  return c(), a("h2", null, "About");
+const b = /* @__PURE__ */ _(k, [["render", y]]), w = {}, A = /* @__PURE__ */ l("h2", null, "About", -1);
+function g(t, o) {
+  const e = c("router-view");
+  return r(), a(s, null, [
+    A,
+    p(e, { to: "/marketplace/companies" }, {
+      default: u(() => [
+        m("go back")
+      ]),
+      _: 1
+    })
+  ], 64);
 }
-const g = /* @__PURE__ */ r(A, [["render", H]]), w = [
-  { path: "/marketplace/companies", component: y },
+const H = /* @__PURE__ */ _(w, [["render", g]]), $ = [
+  { path: "/marketplace/companies", component: b },
   {
-    path: "/marketplace/companies/individual",
+    path: "/marketplace/companies/:company",
     name: "about",
-    component: g
+    component: H
   }
 ], V = f({
   history: h(),
-  routes: w
+  routes: $
 });
 export {
   N as TestComponentApp,
