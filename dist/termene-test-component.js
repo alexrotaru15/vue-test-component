@@ -5,7 +5,7 @@ const a = (e, o) => {
   for (const [s, i] of o)
     t[s] = i;
   return t;
-}, g = (e) => (d("data-v-18ccd6b8"), e = e(), l(), e), y = /* @__PURE__ */ g(() => /* @__PURE__ */ _("div", { class: "card" }, "aceasta este noua componenta", -1)), H = {
+}, g = (e) => (d("data-v-18ccd6b8"), e = e(), l(), e), y = /* @__PURE__ */ g(() => /* @__PURE__ */ _("div", { class: "card" }, "aceasta este noua componenta", -1)), k = {
   __name: "HelloWorld",
   props: {
     msg: String
@@ -16,14 +16,14 @@ const a = (e, o) => {
       y
     ], 64));
   }
-}, $ = /* @__PURE__ */ a(H, [["__scopeId", "data-v-18ccd6b8"]]);
-const k = (e) => (d("data-v-f15dae4a"), e = e(), l(), e), w = { class: "awala" }, A = /* @__PURE__ */ k(() => /* @__PURE__ */ _("p", null, "end component noua", -1)), I = {
+}, H = /* @__PURE__ */ a(k, [["__scopeId", "data-v-18ccd6b8"]]);
+const $ = (e) => (d("data-v-f15dae4a"), e = e(), l(), e), w = { class: "awala" }, A = /* @__PURE__ */ $(() => /* @__PURE__ */ _("p", null, "end component noua", -1)), I = {
   __name: "App",
   setup(e) {
     return (o, t) => {
       const s = u("router-view");
       return n(), c("div", w, [
-        r($, { msg: "Componenta noua" }),
+        r(H, { msg: "Componenta noua" }),
         r(s),
         A
       ]);
@@ -47,7 +47,7 @@ function B(e, o) {
   return n(), c("h2", null, "About");
 }
 const E = /* @__PURE__ */ a(V, [["render", B]]), T = [
-  { path: "/", component: N },
+  { path: "/marketplace/companies", component: N },
   {
     path: "/marketplace/companies/individual",
     name: "about",
