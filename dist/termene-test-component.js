@@ -1,48 +1,62 @@
-import { ref as g, openBlock as l, createElementBlock as d, Fragment as u, createElementVNode as _, toDisplayString as h, pushScopeId as m, popScopeId as i, resolveComponent as s, createVNode as c, withCtx as p, createTextVNode as r } from "vue";
-const v = (e, n) => {
+import { ref as i, openBlock as c, createElementBlock as _, Fragment as p, createElementVNode as s, toDisplayString as h, pushScopeId as u, popScopeId as l, resolveComponent as d, createVNode as a, withCtx as f, createTextVNode as v } from "vue";
+import { useRouter as b, useRoute as x, createRouter as g, createWebHashHistory as y } from "vue-router";
+const r = (e, t) => {
   const o = e.__vccOpts || e;
-  for (const [t, a] of n)
-    o[t] = a;
+  for (const [n, m] of t)
+    o[n] = m;
   return o;
-}, f = (e) => (m("data-v-18ccd6b8"), e = e(), i(), e), x = /* @__PURE__ */ f(() => /* @__PURE__ */ _("div", { class: "card" }, "aceasta este noua componenta", -1)), y = {
+}, H = (e) => (u("data-v-18ccd6b8"), e = e(), l(), e), w = /* @__PURE__ */ H(() => /* @__PURE__ */ s("div", { class: "card" }, "aceasta este noua componenta", -1)), A = {
   __name: "HelloWorld",
   props: {
     msg: String
   },
   setup(e) {
-    return g(0), (n, o) => (l(), d(u, null, [
-      _("h1", null, h(e.msg), 1),
-      x
+    return i(0), (t, o) => (c(), _(p, null, [
+      s("h1", null, h(e.msg), 1),
+      w
     ], 64));
   }
-}, I = /* @__PURE__ */ v(y, [["__scopeId", "data-v-18ccd6b8"]]);
-const S = (e) => (m("data-v-64a2858c"), e = e(), i(), e), b = /* @__PURE__ */ S(() => /* @__PURE__ */ _("p", null, "end component noua", -1)), k = {
+}, I = /* @__PURE__ */ r(A, [["__scopeId", "data-v-18ccd6b8"]]);
+const S = (e) => (u("data-v-f15dae4a"), e = e(), l(), e), $ = { class: "awala" }, k = /* @__PURE__ */ S(() => /* @__PURE__ */ s("p", null, "end component noua", -1)), C = {
   __name: "App",
   setup(e) {
-    return (n, o) => {
-      const t = s("router-link"), a = s("router-view");
-      return l(), d(u, null, [
-        c(I, { msg: "Componenta noua" }),
-        _("p", null, [
-          c(t, { to: "/" }, {
-            default: p(() => [
-              r("Go to Home")
-            ]),
-            _: 1
-          }),
-          c(t, { to: "/about" }, {
-            default: p(() => [
-              r("Go to About")
-            ]),
-            _: 1
-          })
-        ]),
-        c(a),
-        b
+    return (t, o) => {
+      const n = d("router-view");
+      return c(), _("div", $, [
+        a(I, { msg: "Componenta noua" }),
+        a(n),
+        k
+      ]);
+    };
+  }
+}, F = /* @__PURE__ */ r(C, [["__scopeId", "data-v-f15dae4a"]]), W = /* @__PURE__ */ s("h2", null, "Home", -1), N = {
+  __name: "Home",
+  setup(e) {
+    return b(), x(), (t, o) => {
+      const n = d("router-link");
+      return c(), _(p, null, [
+        W,
+        a(n, { to: "about" }, {
+          default: f(() => [
+            v("about")
+          ]),
+          _: 1
+        })
       ], 64);
     };
   }
-}, A = /* @__PURE__ */ v(k, [["__scopeId", "data-v-64a2858c"]]);
+}, R = {};
+function V(e, t) {
+  return c(), _("h2", null, "About");
+}
+const B = /* @__PURE__ */ r(R, [["render", V]]), E = [
+  { path: "/", component: N },
+  { path: "/about", name: "about", component: B }
+], O = g({
+  history: y(),
+  routes: E
+});
 export {
-  A as App
+  F as TestComponentApp,
+  O as router
 };

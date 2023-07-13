@@ -1,3 +1,4 @@
-import App from "./App.vue";
+import TestComponentApp from "./App.vue";
+import router from "./router";
 
-export { App };
+export { TestComponentApp, router };

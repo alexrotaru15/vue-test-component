@@ -3,13 +3,15 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "files":["dist"],
-  "main":"./dist/termene-test-component.umd.cjs",
-  "module":"./dist/termene-test-component.js",
-  "exports":{
-    ".":{
-      "import":"./dist/termene-test-component.js",
-      "require":"./dist/termene-test-component.umd.cjs"
+  "files": [
+    "dist", "src"
+  ],
+  "main": "./dist/termene-test-component.umd.cjs",
+  "module": "./dist/termene-test-component.js",
+  "exports": {
+    ".": {
+      "import": "./dist/termene-test-component.js",
+      "require": "./dist/termene-test-component.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
