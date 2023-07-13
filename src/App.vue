@@ -3,11 +3,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <div class="awala">
-    <HelloWorld msg="Componenta noua" />
-    <router-view></router-view>
-    <p>end component noua</p>
-  </div>
+  <router-view></router-view>
 </template>
 
 <style scoped>
